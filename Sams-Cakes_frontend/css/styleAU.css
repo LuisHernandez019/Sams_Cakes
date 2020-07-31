@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #b224ef, #7579ff);
+}
+
+.form-container {
+  width: 600px;
+  height: 490px;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.FormUser {
+  width: 600px;
+  height: 490px;
+  padding: 60px 40px 80px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.form-logo {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: absolute;
+  top: -70px;
+  left: calc(50% - 60px);
+}
+
+.FormUser h5 {
+  margin: 0;
+  padding: 0 0 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+.txtfield {
+  display: inline-block;
+  width: 49%;
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 25px auto 5px;
+}
+
+.txtfield input {
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 7px;
+  height: 40px;
+}
+
+.txtfield span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.txtb span::after{
+  content: '';
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;
+}
+.focus + span::after{
+  width: 100%;
+}
+
+.nacimiento {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0px;
+}
+
+.birthday {
+  padding-left: 140px;
+}
+
+.cuenta, .botones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones {
+  margin-top: 25px;
+}
+
+.AEC-boton {
+  width: 137px;
+  height: 40px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  margin: auto;
+}
+
+.AEC-boton:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.AEC-boton:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.AEC-boton:hover:before {
+  filter: blur(20px);
+  opacity: 8;
+  animation: animate 8s linear infinite;
+}

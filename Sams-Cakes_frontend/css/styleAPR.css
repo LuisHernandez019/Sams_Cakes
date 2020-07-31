@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+  
+body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: -webkit-linear-gradient(left, #7987ff, #2a36d8, #787aff);
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+.FormProvider .logo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 50px);
+  }
+
+  .FormProvider {
+    width: 600px;
+    height: 490px;
+    background: #fff;
+    position: relative;
+    padding: 60px 40px 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .FormProvider .button{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30 px;
+    margin: 40px 0;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    /*overflow: hidden;*/
+    transition: 0.5s;
+    letter-spacing: 4px;
+  }
+
+  .FormProvider .button:hover{
+      background: #03e9f4;
+      color: #050801;
+      box-shadow: 0 0 5px #03e9f4,
+                  0 0 25px #03e9f4,
+                  0 0 50px #03e9f4,
+                  0 0 200px #03e9f4;
+
+  }
+
+  .FormProvider .button .span{
+      /*Tabas vienda el botoncito*/
+  }
+

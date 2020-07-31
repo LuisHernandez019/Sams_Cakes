@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #b224ef, #7579ff);
+}
+
+.login-container {
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.login-form {
+  width: 360px;
+  height: 550px;
+  padding: 60px 40px 80px;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.login-form h2 {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.img-logo {
+  width: 125px;
+  height: 125px;
+  margin: 0px auto 10px;
+  display: block;
+}
+
+.txtfield {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtfield input {
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 7px;
+  height: 40px;
+}
+
+.txtfield span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.txtb span::after{
+  content: '';
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;
+}
+
+.focus + span::after{
+  width: 100%;
+}
+
+.sh-button {
+  position: absolute;
+  width: 27.5px;
+  height: 27.5px;
+  top: 345px;
+  left: 285px;
+  cursor: pointer;
+}
+
+.login-boton {
+  width: 137px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-boton:hover {
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.login-boton:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 30px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.login-boton:hover:before {
+  filter: blur(20px);
+  opacity: 8;
+  animation: animate 8s linear infinite;
+}
+
+.login-background {
+  width: 540px;
+  height: 550px;
+  background-image: url(../img/wallpaper_cashier.jpg);
+  padding: 80px 40px;
+  float: left;
+  border-radius: 0px 10px 10px 0px;
+}

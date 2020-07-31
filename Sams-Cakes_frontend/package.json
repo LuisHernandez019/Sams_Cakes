@@ -1,0 +1,11 @@
+{
+  "name": "sams_cakes",
+  "version": "1.0.0",
+  "description": "frontend to Sams Cakes project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Viviana Rojo y Luis Hernández",
+  "license": "ISC"
+}
