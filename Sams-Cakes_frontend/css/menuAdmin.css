@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -6,7 +6,7 @@
     font-family: 'Nunito', sans-serif;
 }
 
-body{
+body {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -17,7 +17,7 @@ body{
 
 .menu {
     width: 700px;
-    height: 550px;
+    height: 470px;
     background: #fff;
     position: relative;
     border-radius: 10px;
@@ -31,9 +31,9 @@ body{
     display: block;
   }
 
-  .menu h3{
+  .menu h3 {
     width: 100%;
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
     text-shadow: 4px 4px 3px rgb(191, 67, 230);
     color: rgb(83, 83, 83);
@@ -89,6 +89,9 @@ body{
   }
 
   .buttonsLogOff {
+    position: absolute;
+    top: 375px;
+    right: 300px;
     width: 100px;
     height: 50px;
     border: none;
@@ -126,3 +129,51 @@ body{
     opacity: 8;
     animation: animate 8s linear infinite;
   }
+
+.btnAddPro {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}
+
+.btnAddProv {
+  position: absolute;
+  top: 110px;
+  left: 45px;
+}
+
+.btnAddUser {
+  position: absolute;
+  top: 180px;
+  left: 45px;
+}
+
+.btnDelPro {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+}
+
+.btnDelProv {
+  position: absolute;
+  top: 110px;
+  right: 45px;
+}
+
+.btnDelUser {
+  position: absolute;
+  top: 180px;
+  right: 45px;
+}
+
+.btnVS {
+  position: absolute;
+  top: 375px;
+  left: 45px;
+}
+
+.btnVO {
+  position: absolute;
+  top: 375px;
+  right: 45px;
+}
