@@ -16,7 +16,7 @@ body{
 }
 
 .menu {
-    width: 900px;
+    width: 700px;
     height: 550px;
     background: #fff;
     position: relative;
@@ -83,6 +83,45 @@ body{
   }
   
    .buttons:hover:before {
+    filter: blur(20px);
+    opacity: 8;
+    animation: animate 8s linear infinite;
+  }
+
+  .buttonsLogOff {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #075579, #ac0360, #bba800, #075579);
+    background-size: 400%;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .buttonsLogOff:hover {
+    animation: animate 8s linear infinite;
+  }
+  
+    .buttonsLogOff:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
+    background-size: 400%;
+    border-radius: 30px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+   .buttonsLogOff:hover:before {
     filter: blur(20px);
     opacity: 8;
     animation: animate 8s linear infinite;
