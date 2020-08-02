@@ -23,12 +23,18 @@ window.onload = function () {
         let pass = document.querySelector("#pass")
 
         if (arg.length == 0)
-            document.querySelector("#error").textContent = 'Usuario no existe'
+            document.querySelector("#error").textContent = 'El usuario no existe'
         else if (pass.value != arg[0].password)
             document.querySelector("#error").textContent = 'La contraseña es incorrecta'
         else if (kindUser == "Admin")
             main.actualizar('html/menuAdmin.html')
         else
             main.actualizar('html/menuCashier.html')
+
+        setTimeout("ocultar()", 3000)
     })
 };
+
+function ocultar() {
+    document.querySelector("#error").textContent = ''
+}

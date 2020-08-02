@@ -16,6 +16,7 @@ function createWindow() {
     win.maximize()
     win.setResizable(false)
     win.setMovable(false)
+    win.removeMenu()
 }
 
 app.on('ready', createWindow)
@@ -25,6 +26,7 @@ let actualizar = (ruta) => {
     win.maximize()
     win.setResizable(false)
     win.setMovable(false)
+    win.removeMenu()
 }
 
 const consultaLoginAdmin = (userName) => {
