@@ -18,7 +18,8 @@ body {
 .menu {
     width: 700px;
     height: 470px;
-    background: #fff;
+    background: #ffffff;
+    /*background: linear-gradient(90deg, #8fdcff, #ff9bd2, #fff8b7, #8fdcff);*/
     position: relative;
     border-radius: 10px;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -108,27 +109,27 @@ body {
     animation: animate 8s linear infinite;
   }
   
-    .buttonsLogOff:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    right: -5px;
-    left: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
-    background-size: 400%;
-    border-radius: 30px;
-    filter: blur(20px);
-    opacity: 0;
-    transition: 0.5s;
-  }
+.buttonsLogOff:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
+  background-size: 400%;
+  border-radius: 30px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
   
-   .buttonsLogOff:hover:before {
-    filter: blur(20px);
-    opacity: 8;
-    animation: animate 8s linear infinite;
-  }
+.buttonsLogOff:hover:before {
+  filter: blur(20px);
+  opacity: 8;
+  animation: animate 8s linear infinite;
+}
 
 .btnAddPro {
   position: absolute;
