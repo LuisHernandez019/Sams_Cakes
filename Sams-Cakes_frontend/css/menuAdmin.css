@@ -1,9 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -16,119 +16,119 @@ body {
 }
 
 .menu {
-    width: 700px;
-    height: 470px;
-    background: #fff;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-  }
+  width: 700px;
+  height: 470px;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
 
-  .img-menu {
-    width: 250px;
-    height: 250px;
-    margin: 0px auto 10px;
-    display: block;
-  }
+.img-menu {
+  width: 250px;
+  height: 250px;
+  margin: 0px auto 10px;
+  display: block;
+}
 
-  .menu h3 {
-    width: 100%;
-    font-size: 45px;
-    text-align: center;
-    text-shadow: 4px 4px 3px rgb(191, 67, 230);
-    color: rgb(83, 83, 83);
-    margin-bottom: 30px;
-  }
+.menu h3 {
+  width: 100%;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 4px 4px 3px rgb(191, 67, 230);
+  color: rgb(83, 83, 83);
+  margin-bottom: 30px;
+}
 
-  .buttons {
-    width: 137px;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    color: #fff;
-    font-size: 15px;
-    outline: none;
-    cursor: pointer;
-  }
+.buttons {
+  width: 137px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
   
-  .buttons:hover {
-    animation: animate 8s linear infinite;
-  }
+.buttons:hover {
+  animation: animate 8s linear infinite;
+}
   
-  @keyframes animate {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
+@keyframes animate {
+  0% {
+    background-position: 0%;
   }
+  100% {
+    background-position: 400%;
+  }
+}
   
-    .buttons:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    right: -5px;
-    left: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #72d2ff, #7800bd, #fdf076, #e2a92d);
-    background-size: 400%;
-    border-radius: 30px;
-    filter: blur(20px);
-    opacity: 0;
-    transition: 0.5s;
-  }
+.buttons:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #72d2ff, #7800bd, #fdf076, #e2a92d);
+  background-size: 400%;
+  border-radius: 30px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
   
-   .buttons:hover:before {
-    filter: blur(20px);
-    opacity: 8;
-    animation: animate 8s linear infinite;
-  }
+.buttons:hover:before {
+  filter: blur(20px);
+  opacity: 8;
+  animation: animate 8s linear infinite;
+}
 
-  .buttonsLogOff {
-    position: absolute;
-    top: 375px;
-    right: 300px;
-    width: 100px;
-    height: 50px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(90deg, #075579, #ac0360, #bba800, #075579);
-    background-size: 400%;
-    color: #fff;
-    font-size: 15px;
-    outline: none;
-    cursor: pointer;
-  }
+.buttonsLogOff {
+  position: absolute;
+  top: 375px;
+  right: 300px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #075579, #ac0360, #bba800, #075579);
+  background-size: 400%;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
 
-  .buttonsLogOff:hover {
-    animation: animate 8s linear infinite;
-  }
+.buttonsLogOff:hover {
+  animation: animate 8s linear infinite;
+}
   
-    .buttonsLogOff:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    bottom: -5px;
-    right: -5px;
-    left: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
-    background-size: 400%;
-    border-radius: 30px;
-    filter: blur(20px);
-    opacity: 0;
-    transition: 0.5s;
-  }
+.buttonsLogOff:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
+  background-size: 400%;
+  border-radius: 30px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
   
-   .buttonsLogOff:hover:before {
-    filter: blur(20px);
-    opacity: 8;
-    animation: animate 8s linear infinite;
-  }
+.buttonsLogOff:hover:before {
+  filter: blur(20px);
+  opacity: 8;
+  animation: animate 8s linear infinite;
+}
 
 .btnAddPro {
   position: absolute;
