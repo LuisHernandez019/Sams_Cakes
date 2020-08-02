@@ -3,33 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/styleAPR.css   ">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
     <link rel="shortcut icon" href="../img/cupcake.png">
     <title>Add Provider</title>
 </head>
 <body>
-    <section class="FormProvider">
-        <form>
-            <img src="../img/userPr.png" class="logo">
-            <h5>Add the requested data</h5>
-            <input type="text" placeholder="Provider ID.">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Address">
-            <input type="text" placeholder="Postal Code">
-            <input type="text" placeholder="Telephone">
-            <button class="button">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Edit
-            </button>
-            <button class="button">Save</button>
-            <button class="button">Cancel</button>
-        </form>
-    </section>
-    <!--<script type="text/javascript" src="addP.js"></script> -->
+    <div class="animate__animated animate__zoomIn">
+        <div class="form-container">
+            <section class="FormProvider">
+                <div>
+                    <img src="../img/userPr.png" class="form-logo">
+                    <h5>Add the requested data</h5>
+                    <div class="txtfield">
+                        <input type="text">
+                        <span data-placeholder="Provider ID"></span>
+                    </div>
+                    <div class="txtfield">
+                        <input type="text">
+                        <span data-placeholder="Name"></span>
+                    </div>
+                    <div class="txtfield">
+                        <input type="text">
+                        <span data-placeholder="Address"></span>
+                    </div>
+                    <div class="txtfield">
+                        <input type="text">
+                        <span data-placeholder="Postal Code"></span>
+                    </div>
+                    <div class="txtfield">
+                        <input type="text">
+                        <span data-placeholder="Telephone"></span>
+                    </div>
+                    <div class="botones">
+                        <a href="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Edit
+                        </a>
+                        <a href="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Save
+                        </a>
+                        <a href="">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Cancel
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/inputAnimation.js"></script>
+    <script>if (window.module) module = window.module;</script>
 </body>
 
 </html>
