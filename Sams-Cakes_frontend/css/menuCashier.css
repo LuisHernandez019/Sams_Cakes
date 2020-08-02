@@ -35,8 +35,13 @@ body{
     width: 100%;
     font-size: 50px;
     text-align: center;
+    text-shadow: #000 -1px 1px, #000 -2px 2px, #000 -3px 3px, #000 -4px 4px, #000 -5px 5px;
+    color: rgb(12, 161, 187);
+    letter-spacing: 1px;
+    /*
     text-shadow: 4px 4px 3px rgb(255, 228, 74);
     color: rgb(85, 2, 60);
+    */
     margin-bottom: 30px;
   }
 
