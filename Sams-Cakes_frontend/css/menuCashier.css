@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #025c80, #7579ff, #59d691);
+}
+
+.menu {
+    width: 700px;
+    height: 550px;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .img-menu {
+    width: 250px;
+    height: 250px;
+    margin: 0px auto 10px;
+    display: block;
+  }
+
+  .menu h3{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 4px 4px 3px rgb(255, 228, 74);
+    color: rgb(85, 2, 60);
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    width: 137px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f40353, #51aefa, #8bff6d, #f40353);
+    background-size: 400%;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .buttons:hover {
+    animation: animate 8s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+    .buttons:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #f40353, #51aefa, #8bff6d, #f40353);
+    background-size: 400%;
+    border-radius: 30px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+   .buttons:hover:before {
+    filter: blur(20px);
+    opacity: 8;
+    animation: animate 8s linear infinite;
+  }
+
+  .buttonsLogOff {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #075579, #ac0360, #bba800, #075579);
+    background-size: 400%;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .buttonsLogOff:hover {
+    animation: animate 8s linear infinite;
+  }
+  
+    .buttonsLogOff:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #1d526b, #9733d1, #fce300, #2778c4);
+    background-size: 400%;
+    border-radius: 30px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+   .buttonsLogOff:hover:before {
+    filter: blur(20px);
+    opacity: 8;
+    animation: animate 8s linear infinite;
+  }
