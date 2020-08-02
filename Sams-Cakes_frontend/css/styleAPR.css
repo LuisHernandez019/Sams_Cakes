@@ -8,9 +8,11 @@
 body {
       width: 100%;
       height: 100vh;
-      display: flex;
+      /*display: flex;
       justify-content: center;
       align-items: center;
+      max-height: 100vh;
+      flex-direction: column; */
       background: -webkit-linear-gradient(left, #7987ff, #2a36d8, #787aff);
       font-family: Arial, Helvetica, sans-serif;
 }
@@ -38,7 +40,7 @@ body {
 
   .FormProvider .button{
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     padding: 25px 30 px;
     margin: 40px 0;
     color: #03e9f4;
@@ -56,10 +58,9 @@ body {
                   0 0 25px #03e9f4,
                   0 0 50px #03e9f4,
                   0 0 200px #03e9f4;
-
   }
 
   .FormProvider .button .span{
-      /*Tabas vienda el botoncito*/
+     position: absolute;
+     display: block;
   }
-

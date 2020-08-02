@@ -1,7 +1,7 @@
-const {app, BrowserWindow, net} = require('electron')
+const { app, BrowserWindow, net, ipcMain} = require('electron')
 
 let win
-let secondWin
+var respuesta
 
 function createWindow() {
     win = new BrowserWindow({ show: false, icon: 'img/cupcake.png',
@@ -16,56 +16,59 @@ function createWindow() {
     win.maximize()
     win.setResizable(false)
     win.setMovable(false)
-    win.webContents.openDevTools()
-
-    getLogin()
 }
 
 app.on('ready', createWindow)
 
-exports.actualizar = (ruta) => {
+let actualizar = (ruta) => {
     win.loadFile(ruta)
     win.maximize()
     win.setResizable(false)
     win.setMovable(false)
 }
 
-exports.secondWindow = () => {
-    console.log(":)")
-    secondWin = new BrowserWindow({ icon: 'img/cupcake.png' })
-    secondWin.loadFile("./html/addUser.html")
-    win.maximize()
-    win.setResizable(false)
-    win.setMovable(false)
-}
-
-function getLogin() {
-    const data = JSON.stringify({
-        'userName': 'La mera mera'
-    })
-
+const consultaLogin = (userName) => {
     const options = {
         method: 'GET',
         protocol: 'http:',
         hostname: 'localhost',
-        port: 9002,
-        path: '/getUser'
+        port: 9003,
+        path: '/getUserLogin'
     }
 
     const request = net.request(options, (res) => {
-        console.log(`statusCode: ${res.statusCode}`)
+        console.log(` Request statusCode: ${res.statusCode}`)
     })
-
     request.setHeader('Content-Type', 'application/json');
+
+    const data = JSON.stringify({
+        'userName': userName
+    });
+
     request.write(data);
     request.end();
 
     request.on('response', (response) => {
-        console.log(`STATUS: ${response.statusCode}`)
-        console.log(`HEADERS: ${JSON.stringify(response.headers)}`)
         response.on('data', (chunk) => {
-            console.log(`BODY: ${chunk}`)
-            console.log(JSON.parse(chunk)[0].login)
-        });
+            respuesta = JSON.parse(chunk)
+        })
+    })
+}
+
+ipcMain.on('asynchronous-message', (event, arg) => {
+    dosomething(arg, function () {
+        setTimeout(() => {
+            event.reply('user-reply', respuesta)
+        }, 500)
     });
+})
+
+function dosomething(damsg, callback) {
+    consultaLogin(damsg)
+    if (typeof callback == "function")
+        callback()
+}
+
+module.exports = {
+    actualizar,
 }
