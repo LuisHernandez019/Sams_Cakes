@@ -14,10 +14,19 @@ connection.connect((err) => {
 })
 
 // Método GET
-const getUser = (request, response) => {
+const getUserAdmin = (request, response) => {
     const { userName } = request.body
 
-    connection.query('SELECT * FROM user WHERE userName = ?', [userName], (error, result) => {
+    connection.query('SELECT * FROM user WHERE userName = ? AND kindUser = "Admin"', [userName], (error, result) => {
+        if (error) throw error
+        response.status(200).json(result)
+    })
+}
+
+const getUserCashier = (request, response) => {
+    const { userName } = request.body
+
+    connection.query('SELECT * FROM user WHERE userName = ? AND kindUser = "Cajero"', [userName], (error, result) => {
         if (error) throw error
         response.status(200).json(result)
     })
@@ -53,7 +62,8 @@ const deleteUser = (request, response) => {
 }
 
 module.exports = {
-    getUser,
+    getUserAdmin,
+    getUserCashier,
     insertUser,
     updateUser,
     deleteUser,

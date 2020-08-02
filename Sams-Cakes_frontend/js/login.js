@@ -4,9 +4,18 @@ const { ipcRenderer } = require('electron')
 const remote = require('electron').remote
 const main = remote.require('./main.js')
 
-document.querySelector("#btnAdmin").addEventListener('click', () => {
+let kindUser = "Admin"
+
+document.querySelector('#btnAdmin').addEventListener('click', () => {
     let login = document.querySelector("#login");
-    ipcRenderer.send('asynchronous-message', login.value)
+    kindUser = "Admin"
+    ipcRenderer.send('asynchronous-message', login.value, kindUser)
+})
+
+document.querySelector('#btnCashier').addEventListener('click', () => {
+    let login = document.querySelector("#login");
+    kindUser = "Cashier"
+    ipcRenderer.send('asynchronous-message', login.value, kindUser)
 })
 
 window.onload = function () {
@@ -17,7 +26,9 @@ window.onload = function () {
             document.querySelector("#error").textContent = 'Usuario no existe'
         else if (pass.value != arg[0].password)
             document.querySelector("#error").textContent = 'La contraseña es incorrecta'
-        else
+        else if (kindUser == "Admin")
             main.actualizar('html/menuAdmin.html')
+        else
+            main.actualizar('html/menuCashier.html')
     })
 };
