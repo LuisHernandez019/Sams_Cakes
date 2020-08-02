@@ -18,6 +18,6 @@ window.onload = function () {
         else if (pass.value != arg[0].password)
             document.querySelector("#error").textContent = 'La contraseña es incorrecta'
         else
-            main.actualizar('html/addUser.html')
+            main.actualizar('html/menuAdmin.html')
     })
 };
