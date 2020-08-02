@@ -43,7 +43,7 @@ body {
 }
 
 .FormProvider h5 {
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0 0 0;
   text-align: center;
   font-size: 25px;
@@ -68,17 +68,55 @@ body {
   height: 40px;
 }
 
+.txtfield span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.txtb span::after{
+  content: '';
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;
+}
+.focus + span::after{
+  width: 100%;
+}
+
+.address .txtfield{
+  width: 100%
+}
+
+.aditional, .botones {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones {
+  margin-top: 45px;
+}
+
 a {
+  margin: auto;
   position: relative;
   display: inline-block;
-  padding: 25px 30px;
-  margin: 40px 0;
+  padding: 20px 25px;
   color: #03e9f4;
-  font-size: 24px;
+  font-size: 22.5px;
+  font-weight: 800;
   text-decoration: none;
   overflow: hidden;
   transition: 0.5s;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 a:nth-child(1) {
