@@ -38,6 +38,8 @@ body {
   width: 100%;
   font-size: 30px;
   text-align: center;
+  text-shadow: 4px 4px 3px rgb(66, 66, 68);
+  color: rgb(37, 17, 150);
   margin-bottom: 30px;
 }
 

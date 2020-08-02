@@ -46,6 +46,8 @@ body {
   margin: 0;
   padding: 0 0 0;
   text-align: center;
+  text-shadow: 4px 4px 3px rgb(243, 96, 223);
+  color: rgb(5, 153, 109);
   font-size: 25px;
 }
 
